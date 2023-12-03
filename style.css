@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: white;
+    --second-bg-color: #112e42;
+    --text-color: black;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 2000px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+    border-bottom: 2px solid gray;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+}
+
+.logo {
+    position: relative;
+    left: 0;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar {
+    position: relative;
+    left: 10rem;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    margin-left: 100px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+.navbar button {
+    margin-left: 14rem;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(244, 236, 236);
+}
+
+.navbar button a {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    /* background-color: rgb(244, 236, 236);  */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: purple;
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+/*********************************************** Main section starts here ***************************************/
+.container {
+    text-align: center;
+    margin-top: 500px;
+    /* Adjust for starting position */
+}
+
+.scroll-text {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+.show {
+    opacity: 1;
+    top: 150px;
+    /* Scroll position */
+}
+
+.section-content {
+    min-height: 60vh;
+    /* background-color: blue; */
+    min-width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-content h4 {
+    color: purple;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.section-content .main-heading {
+    font-size: 64px;
+}
+
+.section-content .main-heading span {
+    color: orange;
+}
+
+.section-content p {
+    font-size: 20px;
+    color: grey;
+}
+
+.section-content .main-buttons button {
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 14px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(133, 112, 230);
+    transition: 0.5s;
+}
+
+.section-content .main-buttons button:hover {
+    box-shadow: 0px 0px 20px rgb(133, 112, 230);
+}
+
+.container2 {
+    position: relative;
+    top: 150px;
+    /* left: 25vw; */
+    transition: transform 1s ease-in-out;
+}
+
+
+.container3 {
+    height: 1000px;
+    position: relative;
+    top: 100vh;
+    width: 100vw;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container3-main {
+    margin-top: 10vh;
+    width: 80vw;
+    height: 600px;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+}
+
+.container3-main h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+}
+
+.container3-main span {
+    color: orange;
+}
+
+.container3-main p {
+    font-size: 20px;
+    color: gray;
+    width: 38vw;
+}
+
+
+/*                      CARD ANIMATION STARTS HERE               */
+
+section {
+    min-height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+section:nth-child(1) {
+    color: #e0ffff;
+}
+
+section:nth-child(2) {
+    color: #42455a;
+    background: #e0ffff;
+}
+
+section:nth-child(3) {
+    color: #e0ffff;
+}
+
+section:nth-child(4) {
+    color: #42455a;
+    background: #e0ffff;
+}
+
+section .container4 {
+    /* background-color: #00abf0; */
+    width: 80vw;
+}
+
+
+section .text-container {
+    display: flex;
+}
+
+section .text-container .text-box {
+    width: 30%;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: #161818;
+    border-radius: 20px;
+}
+
+section .text-container .text-box h3 {
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .text-container {
+        flex-direction: column;
+    }
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+marquee{
+    position: relative;
+    top: 100vh;
+    margin: 20px;
+}
+.card {
+    display: inline-block;
+    min-height: 250px;
+    width: 20rem;
+    margin: 1.5rem;
+    border-radius: 10px;
+    /* background-color: red; */
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 0.25rem 1rem;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+  }
+
+  /*                                                making footer                               */
+  footer{
+    position: relative;
+    top: 100vh;
+    height: 10vh;
+    width: 100vw;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  footer .foot-head{
+    font-size: 20px;
+    /* color: white; */
+  }
+
+  footer .foot-links a{
+    font-size: 15px;
+    margin: 4px;
+  }
+  
+  
